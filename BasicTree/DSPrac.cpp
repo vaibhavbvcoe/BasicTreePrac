@@ -110,12 +110,12 @@ void PrintLeftOuterView(node* item)
     {
         int n = q.size();
 
-        for (auto i = 1;i<= n;i++)
+        for (auto i = 0;i< n;i++)
         {
             
             node* el = q.front(); 
             q.pop();
-            if(i == 1)
+            if(i == 0)
                 cout << el->m_data << " ";
 
             if (el->left)
@@ -138,12 +138,12 @@ void PrintRightOuterView(node* item)
     {
         int n = q.size();
 
-        for (auto i = 1; i <= n; i++)
+        for (auto i = 0; i < n; i++)
         {
 
             node* el = q.front();
             q.pop();
-            if (i == 1)
+            if (i == n-1)
                 cout << el->m_data << " ";
 
             if (el->left)
@@ -165,12 +165,12 @@ void PrintFullOuterView(node* item)
     {
         int n = q.size();
 
-        for (auto i = 1; i <= n; i++)
+        for (auto i = 0; i < n; i++)
         {
 
             node* el = q.front();
             q.pop();
-            if (i == 1 || (i == n))
+            if (i == 0 || (i == n-1))
                 cout << el->m_data << " ";
 
             if (el->left)
