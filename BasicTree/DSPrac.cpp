@@ -19,6 +19,7 @@ void insert(node **item,int val)
     if (*item == NULL)
     {
         *item = new node(val);
+        return;
     }
     else
     {
